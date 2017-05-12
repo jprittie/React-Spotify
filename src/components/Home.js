@@ -2,19 +2,19 @@
 import React, { Component } from 'react';
 
 
-class MainContent extends Component {
-	render () {
+class Home extends Component {
+	render(){
 		return (
-		 <div className="main-content clearfix">
+			<div>
 		    <ul id="albums" className="album-list">
 		      <li className="desc">
 		        <i className="material-icons icn-album">album</i>
 		        Search for your favorite albums!
 		      </li>
 	      </ul>
-      </div>
+			</div>
 		);
 	}
-};
+}
 
-export default MainContent;
+export default Home;
