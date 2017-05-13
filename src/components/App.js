@@ -7,7 +7,7 @@ class App extends Component {
 	render () {
 		return (
 	  	<div>
-    		<Header />
+    		<Header siteName="AlbumSearch" />
     		<Main />
   		</div>
 		);
