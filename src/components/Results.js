@@ -7,15 +7,15 @@ class Results extends Component {
 		return (
 			<div>
 		    <ul id="albums" className="album-list">
-		    	<Single />
-		    	<Single />
-		    	<Single />
-		    	<Single />
-		    	<Single />	
-		    	<Single />	
-		    	<Single />
-		    	<Single />	
-		    	<Single />	     			    	
+		    	<Album />
+		    	<Album />		    	
+		    	<Album />     		
+		    	<Album />	
+		    	<Album />
+		    	<Album />	
+		    	<Album />	
+		    	<Album />
+		    	<Album />		    	    	
 	      </ul>
 			</div>
 
@@ -25,4 +25,4 @@ class Results extends Component {
 
 export default Results;
 
-// need pagination? how else would it know how many Single components to render?
+// need pagination? what if there are more than nine album results?

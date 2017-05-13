@@ -1,7 +1,7 @@
 
 import React, { Component } from 'react';
 
-class Single extends Component {
+class Album extends Component {
 	render () {
 		return(
       <li className="desc">
@@ -12,4 +12,4 @@ class Single extends Component {
 	}
 };
 
-export default Single;
+export default Album;
