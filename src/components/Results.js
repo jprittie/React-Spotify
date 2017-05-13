@@ -1,21 +1,26 @@
 
 import React, { Component } from 'react';
-import Single from './Single';
+import Album from './Album';
 
 class Results extends Component {
+
+  constructor () {
+    super();
+    this.state = {
+      albums: [],
+  //  loading: true
+    }
+  }
+
+
+
+
 	render() {
 		return (
 			<div>
 		    <ul id="albums" className="album-list">
-		    	<Album />
-		    	<Album />		    	
-		    	<Album />     		
-		    	<Album />	
-		    	<Album />
-		    	<Album />	
-		    	<Album />	
-		    	<Album />
-		    	<Album />		    	    	
+		    	{console.log(this.props.albums)}    
+		    	{this.props.albums.map( detail => <Album details={detail} key={detail.id}/> )}	    	
 	      </ul>
 			</div>
 
@@ -25,4 +30,3 @@ class Results extends Component {
 
 export default Results;
 
-// need pagination? what if there are more than nine album results?

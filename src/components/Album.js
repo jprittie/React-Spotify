@@ -5,7 +5,7 @@ class Album extends Component {
 	render () {
 		return(
       <li className="desc">
-      	Single result will go here
+      	Album result will go here
       </li>
 
 		);
