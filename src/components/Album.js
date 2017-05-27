@@ -2,10 +2,20 @@
 import React, { Component } from 'react';
 
 class Album extends Component {
+/*
+	static propTypes = {
+		details.name: React.PropTypes.string.isRequired
+
+	}
+*/
+
+
+
+
 	render () {
 		return(
       <li className="desc">
-      	Album result will go here
+      	{this.props.details.name}
       </li>
 
 		);
