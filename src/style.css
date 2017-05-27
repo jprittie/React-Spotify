@@ -115,6 +115,7 @@ button {
   margin-top: 50px;
   text-align: center;
   font-size: 1.25em;
+
 }
 
 .album-list li {
@@ -210,16 +211,22 @@ button {
 }
 
 @media (min-width: 550px) {
-
+  /*
   .album-list li {
     float: left;
-    width: 50%;
+    width: 33.333333333%;
+  }
+  */
+  .album-list .desc {
+    width: 33.333333333%;
+    float: left;
   }
 
-  .album-list .desc {
-    width: 100%;
-    float: none;
+  /*
+  .album-list li:nth-of-type(3n+1) {
+    clear: left;
   }
+  */
 
   .poster-wrap {
     height: 290px;
@@ -260,9 +267,11 @@ button {
     margin-top: 34px;
   }
 
+  /*
   .album-list li {
     width: 33.333333333%;
   }
+  */
 }
 
 @media (min-width: 769px) and (max-width: 999px) {
@@ -272,6 +281,7 @@ button {
 }
 
 @media (min-width: 1000px) {
+  /*
   .album-list li {
     width: 25%;
   }
@@ -279,4 +289,5 @@ button {
   .album-list li:nth-of-type(4n+1) {
     clear: left;
   }
+  */
 }
