@@ -106,15 +106,29 @@ button {
   display: block;
 }
 
+.home-text {
+
+}
+
 /* album LIST COMPONENTS -------- */
 
 .no-albums,
-.desc  {
+.desc, #home-icon {
   color: #b0b0b0;
   height: 140px;
   margin-top: 50px;
   text-align: center;
-  font-size: 1.25em;
+  font-size: 1.5em;
+
+}
+
+
+
+.album-list {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: auto;
+  padding-left: auto;
 
 }
 
@@ -211,22 +225,17 @@ button {
 }
 
 @media (min-width: 550px) {
-  /*
-  .album-list li {
-    float: left;
-    width: 33.333333333%;
-  }
-  */
+
   .album-list .desc {
     width: 33.333333333%;
     float: left;
   }
 
-  /*
-  .album-list li:nth-of-type(3n+1) {
-    clear: left;
+  .album-list #home-icon {
+    width: 100%;
+    float: none;
   }
-  */
+
 
   .poster-wrap {
     height: 290px;
@@ -267,18 +276,18 @@ button {
     margin-top: 34px;
   }
 
-  /*
-  .album-list li {
-    width: 33.333333333%;
-  }
-  */
+
 }
 
 @media (min-width: 769px) and (max-width: 999px) {
   .album-list li:nth-of-type(3n+1) {
     clear: left;
   }
+
+
 }
+
+
 
 @media (min-width: 1000px) {
   /*
@@ -288,6 +297,7 @@ button {
 
   .album-list li:nth-of-type(4n+1) {
     clear: left;
-  }
-  */
+  } */
 }
+
+

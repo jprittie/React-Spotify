@@ -22,6 +22,7 @@ class Results extends Component {
   	fetch(`https://api.spotify.com/v1/search?q=album:${searchTerm}&type=album`)
   	.then(data => data.json())
   	.then((albumResults) => {
+      console.log(albumResults);
       const { items } = albumResults.albums;
   		this.setState({ albums: items });
   	})
