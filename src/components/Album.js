@@ -15,7 +15,12 @@ class Album extends Component {
 	render () {
 		return(
       <li className="desc">
-      	{this.props.details.name}
+      	<div className="poster-wrap">
+      		<img className="album-art" src=""/>
+      	</div>
+      	<span className="album-title">{this.props.details.name}</span>
+      	<span className="album-artist">{this.props.details.artist}</span>
+      	
       </li>
 
 		);
