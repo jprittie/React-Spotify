@@ -10,8 +10,6 @@ class Album extends Component {
 */
 
 
-
-
 	render () {
 		return(
       <li className="desc">
