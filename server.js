@@ -10,8 +10,8 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 
-const client_id = 'CLIENT_ID'; // Your client id
-const client_secret = 'CLIENT_SECRET'; // Your secret
+const client_id = ''; // Your client id
+const client_secret = ''; // Your secret
 
 // application requests authorization
 const authOptions = {
@@ -27,11 +27,13 @@ const authOptions = {
 
 
 app.get('/search/:q', (req, res) => {
-  const param = req.query.q;
+ 
+  console.log(req.params.q);
+  const albumName = req.params.q;
 
-  if (!param) {
+  if (!albumName) {
     res.json({
-      error: 'Missing required parameter `q`',
+      error: 'Missing required parameter `searchTerm`',
     });
     return;
   }
@@ -40,10 +42,12 @@ app.get('/search/:q', (req, res) => {
   request.post(authOptions, function(error, response, body) {
     if (!error && response.statusCode === 200) {
 
+//fetch(`https://api.spotify.com/v1/search?q=album:${searchTerm}&type=album`)
+
       // use the access token to access the Spotify Web API
       const token = body.access_token;
       const options = {
-        url: 'https://api.spotify.com/v1/',
+        url: 'https://api.spotify.com/v1/search?q=album:lemonade&type=album',
         headers: {
           'Authorization': 'Bearer ' + token
         },
