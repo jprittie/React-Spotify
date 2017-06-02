@@ -16,10 +16,17 @@ class Results extends Component {
 		this.loadAlbums();
 	}
 
-
+/*
+function search(query) {
+  return fetch(`/api/food?q=${query}`, {
+    accept: 'application/json',
+  }).then(checkStatus)
+    .then(parseJSON);
+} */
+//fetch(`https://api.spotify.com/v1/search?q=album:${searchTerm}&type=album`)
 
   loadAlbums = (searchTerm = 'lemonade') => {
-  	fetch(`https://api.spotify.com/v1/search?q=album:${searchTerm}&type=album`)
+  	fetch(`/search/${searchTerm}`)
   	.then(data => data.json())
   	.then((albumResults) => {
       console.log(albumResults);
