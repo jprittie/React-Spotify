@@ -17,8 +17,7 @@
   "scripts": {
     "start": "concurrently \"npm run server\" \"npm run client\"",
     "server": "babel-node server.js",
-    // Fix start-client.js
-    "client": "babel-node start-client.js"
+    "client": "babel-node client/src/index.js"
   },
   "author": "",
   "license": "ISC"
