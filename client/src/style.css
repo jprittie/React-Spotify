@@ -134,6 +134,7 @@ button {
 
 .album-list li {
   margin: 1.925em 0 0;
+  height: auto;
 }
 
 .album-list a {
