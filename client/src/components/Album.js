@@ -8,21 +8,28 @@ class Album extends Component {
 
 	}
 */
+    
+    // const image = labels ? labels.medium : 'notfound.jpg';
+    // const cover = images ? images[1].url :
+     
 
+  render () {
+    const { name, images } = this.props.details;
+    const { artist } = this.props.details.artists[0].name; 
 
-	render () {
-		return(
+    return(
       <li className="desc">
-      	<div className="poster-wrap">
-      		<img className="album-art" src=""/>
-      	</div>
-      	<span className="album-title">{this.props.details.name}</span>
-      	<span className="album-artist">{this.props.details.artist}</span>
+      
+	  <span className="album-title">{name}</span>
+	  <span className="album-artist">{artist}</span>
+        <div className="poster-wrap">
+          <img className="album-art" src={images[1].url} alt={name}/>
+        </div>
       	
       </li>
 
-		);
-	}
+     );
+  }
 };
 
 export default Album;
