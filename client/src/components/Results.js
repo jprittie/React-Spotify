@@ -13,7 +13,9 @@ class Results extends Component {
   }
 
 	componentWillMount() {
-		this.loadAlbums();
+    const params = this.props.match.params || {};
+    const searchTerm = params.searchTerm || undefined;
+		this.loadAlbums(searchTerm);
 	}
 
 /*
@@ -25,7 +27,7 @@ function search(query) {
 } */
 //fetch(`https://api.spotify.com/v1/search?q=album:${searchTerm}&type=album`)
 
-  loadAlbums = (searchTerm = 'lemonade') => {
+  loadAlbums = (searchTerm) => {
   	fetch(`/search/${searchTerm}`)
   	.then(data => data.json())
   	.then((albumResults) => {
