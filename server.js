@@ -9,9 +9,9 @@ if (process.env.NODE_ENV === 'production') {
   app.use(express.static('client/build'));
 }
 
-
-const client_id = ''; // Your client id
-const client_secret = ''; // Your secret
+const spotifykeys = require('./spotifykeys.json');
+const client_id = spotifykeys.client_id; // Your client id
+const client_secret = spotifykeys.client_secret; // Your secret
 
 // application requests authorization
 const authOptions = {
