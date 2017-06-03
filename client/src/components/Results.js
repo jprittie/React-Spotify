@@ -42,7 +42,7 @@ function search(query) {
 		return (
 			<div>
 		    <ul id="albums" className="album-list">
-        {/*<pre>{JSON.stringify(this.state.albums,null,'  ')}</pre>*/}
+        {/*<pre>{JSON.stringify(this.state.albums,null,'  ')}</pre> */}
 		    { this.state.albums.map( detail => <Album details={detail} key={detail.id}/> ) }  	
 	      </ul>
 			</div>
